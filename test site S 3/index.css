@@ -1,0 +1,1087 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?nube2k");
+  src: url("fonts/icomoon.eot?nube2k#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?nube2k") format("truetype"),
+    url("fonts/icomoon.woff?nube2k") format("woff"),
+    url("fonts/icomoon.svg?nube2k#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+  text-align: right;
+}
+
+.icon-mail3:before {
+  content: "\ea85";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+  font-size: 0.75em;
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+  font-size: 0.75em;
+  margin-right: 1em;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+  font-family: "Heebo", arial, sans-serif;
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+}
+
+/* --HEADER-------------------------------------------------------------*/
+svg {
+  fill: white;
+  width: 23px;
+}
+
+svg:hover {
+  fill: black;
+}
+
+.active {
+  fill: black;
+  color: black;
+}
+
+/* -> icon voor het huisje */
+header li {
+  text-align: center;
+  margin: auto 10px;
+}
+
+header li img {
+  width: 43px;
+}
+
+header li p {
+  font-size: 12px;
+  font-family: heebo;
+  color: white;
+  text-align: center;
+}
+
+#balkPhone,
+#balkDesktop {
+  width: 100%;
+  height: auto;
+}
+
+#balkDesktop {
+  display: none;
+}
+
+#balkDesktop input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+header ul {
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 4px;
+  padding-right: 17px;
+  display: flex;
+  border-radius: 60px;
+  background-color: #9ec4f1;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 40px;
+  font-family: "Heebo", arial, sans-serif;
+}
+
+.discover {
+  text-align: right;
+  margin-top: 40px;
+  margin-right: 5%;
+}
+
+.discover a {
+  text-align: center;
+  font-family: "Heebo", arial, sans-serif;
+  background-color: #a2b98a;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #a2b98a;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 20px;
+  padding: 5px 10px;
+}
+
+/* ---HEADER DEEL 2------------------------------------------------------------ */
+
+header h1 {
+  text-align: center;
+  color: white;
+  font-size: 6em;
+}
+
+.mainheader {
+  background-image: url(./afbeeldingen/header/Banner.jpg);
+  background-position: 20% 20%;
+  background-size: cover;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ---UITGELICHTTE_ACTIVITEITEN-------------------------------------------- */
+.home {
+  margin: auto;
+  margin-top: 3em;
+  max-width: 1250px;
+}
+
+main {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.home section {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.driehoeklinks {
+  margin-top: 210px;
+  width: 0;
+  height: 0;
+  border-top: solid 10px transparent;
+  border-right: solid 10px black;
+  border-left: solid 10px transparent;
+  border-bottom: solid 10px transparent;
+}
+
+#uitgelicht_1 {
+  width: 90%;
+  height: 430px;
+  margin: auto;
+  background-image: url(afbeeldingen/header/Molenbeek_licht_op.jpg);
+  background-position: 60%;
+}
+
+.home #homecarousel {
+  display: flex;
+  flex-direction: row;
+}
+
+.driehoekrechts {
+  margin-top: 210px;
+  width: 0;
+  height: 0;
+  border-top: solid 10px transparent;
+  border-right: solid 10px transparent;
+  border-left: solid 10px black;
+  border-bottom: solid 10px transparent;
+}
+
+#homecarouselinfo {
+  width: 90%;
+  position: absolute;
+  margin-left: 5%;
+  background-color: rgba(0, 0, 0, 0.719);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1em;
+}
+
+#homecarouselinfo p {
+  color: white;
+  margin-left: 2%;
+  margin-top: 5px;
+  font-weight: 200;
+}
+
+#homecarouselinfo p ~ p {
+  font-weight: 400;
+}
+
+/* --KAARTJE ----------------------------------------------------------- */
+#kaart {
+  font-weight: 800;
+  text-align: center;
+  color: black;
+}
+#kaart p {
+  font-weight: 200;
+  font-size: 1em;
+  margin-left: 60px;
+  padding: 17px 0px;
+  text-align: left;
+}
+
+#kaartjeh2 {
+  font-size: 2em;
+  font-weight: 800;
+  padding-left: 4.5%;
+  text-align: left;
+}
+
+iframe {
+  width: 90%;
+  height: 391px;
+}
+
+#Contactp {
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 19px;
+}
+/* --HOMECONTACTFORMULIER-------------------------------------------- */
+
+#homecontact {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#homecontact h2 {
+  padding-bottom: 25px;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+#homecontact p {
+  width: 98%;
+}
+
+#homeform {
+  padding: 2%;
+  padding-top: 2%;
+  margin-left: 2%;
+  width: 60vw;
+  background-color: #a2b98a;
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+#homeform label {
+  font-weight: 400;
+  display: block;
+  margin-left: 0;
+  margin-bottom: 2%;
+}
+
+#homeform h2 {
+  margin-left: 0%;
+}
+
+#homeform input::placeholder {
+  color: rgba(0, 0, 0, 0.719);
+}
+
+#homeform input {
+  width: 90%;
+  background-color: #a2b98a;
+  border: none;
+  border-bottom: solid white 1px;
+  margin-bottom: 5%;
+}
+
+#homeform textarea {
+  width: 100%;
+}
+
+#homemessage {
+  background-color: rgba(0, 128, 0, 0);
+  border: 1px solid white;
+}
+
+#homeform #homesubmit {
+  width: 30%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.301);
+  border-bottom: none;
+  margin-left: 70%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+/* --FOOTER---------------------------------------------------- */
+footer {
+  background-image: url(afbeeldingen/logo/logofant.svg);
+  background-size: cover;
+  padding-top: 1.5em;
+  margin: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3em;
+  text-align: center;
+  background-color: #9ec4f1;
+  width: 100%;
+  color: white;
+  background-position: right;
+  font-family: "Heebo";
+}
+
+footer img {
+  margin: 0 1em;
+}
+
+.footercontact {
+  text-align: center;
+  margin-left: 1%;
+  margin-top: 0%;
+  padding-top: 0%;
+  width: 49%;
+}
+
+.sponsors {
+  width: 100%;
+  margin-top: 3%;
+}
+.sponsors img {
+  width: 5%;
+}
+.volg {
+  text-align: center;
+  margin-top: 0%;
+  display: block;
+  text-decoration: none;
+  color: white;
+  width: 49%;
+}
+
+.volg p {
+  font-weight: 600;
+}
+
+.volg span {
+  padding-top: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.volg div span {
+  margin-top: 2%;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.abonneer {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.abonneer p {
+  text-align: center;
+  padding-bottom: 1%;
+  font-weight: bold;
+}
+
+.abonneer form {
+  margin-top: 0.25em;
+  text-align: center;
+}
+
+.volgenmail {
+  width: 100;
+  text-align: center;
+}
+/* --INFORMATION.HTML------------------------------------------- */
+.informationheader {
+  padding-top: 10px;
+}
+
+#info h1 {
+  padding: 10px;
+}
+figure h1 {
+  margin-left: 3.7em;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.logorechts p {
+  order: -1;
+}
+
+.info div {
+  display: flex;
+  align-items: center;
+  flex-wrap: flex;
+}
+
+.info p {
+  width: 50%;
+  font-size: 16pt;
+  line-height: 30px;
+  color: #707070;
+  padding-top: 36px;
+}
+
+.logorechts {
+  margin-left: 15em;
+  margin-bottom: 2em;
+}
+
+.logorechts img {
+  margin: 0 5em;
+}
+
+.logolinks {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+.logolinks img {
+  margin: 0 8em;
+}
+
+/* -------ACTIVITEITEN.HTML------------------------------------ */
+.activities {
+  margin: auto;
+}
+
+.activiteitenheader {
+  padding-top: 10px;
+}
+
+.filter a {
+  text-decoration: none;
+}
+
+.test {
+  margin: auto;
+}
+
+.filter li {
+  color: black;
+  background: white;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  width: 170px;
+  border-bottom: 1px solid gray;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.dropdown li {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.dropdown li:first-child {
+  border-top: 1px solid gray;
+}
+
+.filter li a {
+  color: rgb(0, 0, 0);
+}
+
+.dropdown li:hover {
+  background: #c3dca8;
+  cursor: pointer;
+}
+
+.filter li:focus-within a {
+  outline: none;
+}
+
+.filter ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  width: 170px;
+}
+
+.filter ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.filter ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+b {
+  font-weight: bold;
+}
+
+.zoek {
+  text-decoration: none;
+  display: inline;
+  color: white;
+  background-color: #a2b98a;
+  border: 1px solid #a2b98a;
+  padding: 5px 2em;
+  border-radius: 25px;
+  font-size: 16pt;
+  margin-left: 30px;
+}
+
+.space {
+  padding-top: 70px;
+}
+
+.activiteiten article {
+  width: 250px;
+  height: 400px;
+  margin: 3em 40px;
+  z-index: -1;
+  margin-top: 0;
+}
+
+.icon {
+  float: right;
+}
+
+.activiteiten {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.actie {
+  margin-left: 2.6em;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+}
+
+.activiteiten h2 {
+  font-size: 11pt;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(167, 166, 166);
+  font-weight: 200;
+  padding-top: 5px;
+}
+
+.activiteiten h3 {
+  font-weight: 800;
+  font-size: 16pt;
+  padding-bottom: 1em;
+}
+
+.Twolines h3 {
+  padding-bottom: 0;
+}
+
+.activiteiten p {
+  margin: 5px 0;
+}
+
+article {
+  position: relative;
+}
+
+article div {
+  display: flex;
+  align-items: center;
+}
+
+p img {
+  margin-right: 15px;
+}
+
+.infobutton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #ffd5a6;
+  color: white;
+  padding: 5px 15px;
+}
+
+.time {
+  margin-left: 1px;
+}
+
+.human {
+  margin-left: 3px;
+}
+
+.location {
+  margin-left: 4px;
+}
+
+.price {
+  margin-left: 7px;
+}
+
+/* ---KALENDER (AGENDA.HTML) --------------------------------------------------------- */
+
+.agendaheader {
+  padding-top: 10px;
+}
+
+#agendamain {
+  margin: auto;
+}
+
+#agendamain h1 {
+  text-align: center;
+}
+
+#agendamain h2 {
+  font-size: 2em;
+  font-weight: 800;
+  margin-left: 5%;
+}
+
+.agendadriehoek {
+  margin-top: 328px;
+}
+
+#agendaflexbox {
+  display: flex;
+  flex-direction: row;
+}
+
+#kalender {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 90vh;
+  align-content: flex-start;
+}
+
+#kalender div {
+  width: 14%;
+  height: 16%;
+  border: solid black 0.5px;
+  position: relative;
+}
+
+#kalender div:nth-child(1),
+#kalender div:nth-child(2),
+#kalender div:nth-child(3),
+#kalender div:nth-child(3),
+#kalender div:nth-child(34),
+#kalender div:nth-child(35) {
+  background-color: #c9c9c99a;
+}
+
+.daynumber {
+  text-align: right;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+
+.kalenderevent {
+  font-size: 0.8em;
+  font-weight: 400;
+  background-color: #ffd5a6;
+  padding-right: 12px;
+}
+
+.kalenderevent ~ .kalenderevent {
+  margin-top: 5px;
+}
+.kalenderevent ~ img {
+  margin-top: 5px;
+}
+
+.eventicon {
+  position: absolute;
+  width: 10%;
+  right: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* ------------------------------------------------------------------ */
+
+/*mobile version*/
+
+@media screen and (max-width: 768px) {
+  #calendarbutton {
+    display: none;
+  }
+
+  header h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.4em;
+  }
+
+  .discover {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10%;
+  }
+
+  .discover a {
+    text-align: center;
+    font-family: "Heebo", arial, sans-serif;
+    background-color: #a2b98a;
+    text-decoration: none;
+    color: white;
+    border: 2px solid #a2b98a;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    margin: auto;
+  }
+
+  #uitgelicht_1 {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    background-image: url(afbeeldingen/header/Molenbeek_licht_op.jpg);
+    background-position: 60%;
+  }
+  #kaartje {
+    margin-top: 20px;
+    display: block;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+    background-color: RGB(158, 196, 241);
+    text-align: left;
+  }
+  #kaart {
+    background-color: #9ec4f1;
+    padding-bottom: 10px;
+    margin: auto;
+  }
+  #kaartjeh2 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: left;
+    background-color: RGB(158, 196, 241);
+    padding-top: 3%;
+    padding-left: 27px;
+    color: white;
+  }
+
+  iframe {
+    width: 85%;
+    height: 280px;
+    margin: auto;
+    text-align: center;
+  }
+
+  #kaartje p {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: left;
+    margin: auto;
+    font-weight: 200;
+    width: 85%;
+    color: white;
+  }
+  #homecarouselinfo {
+    top: 15px;
+  }
+  /*contactform*/
+
+  #homecontact {
+    margin-top: 7%;
+    display: block;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #homecontact h2 {
+    padding-bottom: 25px;
+    font-size: 2em;
+    font-weight: 800;
+  }
+
+  #homecontact p {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  #homeform {
+    margin: auto;
+    width: 95%;
+    background-color: #a2b98a;
+    color: white;
+  }
+
+  #homeform label {
+    font-weight: 400;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 2%;
+  }
+
+  #homeform h2 {
+    margin-left: 0%;
+  }
+
+  #homeform input::placeholder {
+    color: rgba(0, 0, 0, 0.719);
+  }
+
+  #homeform input {
+    width: 90%;
+    background-color: #a2b98a;
+    border: none;
+    border-bottom: solid white 1px;
+    margin-bottom: 5%;
+  }
+
+  #homeform textarea {
+    width: 100%;
+  }
+
+  #homeform #homesubmit {
+    width: 30%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.301);
+    border-bottom: none;
+    margin-left: 70%;
+    margin-top: 3%;
+  }
+
+  /* info */
+
+  .logorechts {
+    margin-left: 15em;
+    margin-bottom: 2em;
+  }
+
+  .logorechts img {
+    margin: 0 5em;
+  }
+
+  .logolinks img {
+    margin: auto;
+  }
+
+  .logolinks figure {
+    width: 100%;
+    margin: auto;
+  }
+
+  .info h1 {
+    text-align: center;
+    margin-left: 0%;
+  }
+
+  .info div {
+    display: inline;
+  }
+
+  .info p {
+    width: 80%;
+    font-size: 11pt;
+    line-height: 30px;
+    color: #707070;
+    text-align: left;
+    margin: auto;
+  }
+
+  .driehoeklinks {
+    margin-top: 210px;
+    width: 0;
+    height: 0;
+    border-top: solid 10px transparent;
+    border-right: solid 10px rgba(0, 0, 0, 0);
+    border-left: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+  }
+
+  .driehoekrechts {
+    margin-top: 210px;
+    width: 0;
+    height: 0;
+    border-top: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-left: solid 10px rgba(0, 0, 0, 0);
+    border-bottom: solid 10px transparent;
+  }
+
+  /* --FOOTER---------------------------------------------------- */
+  footer {
+    margin: 0%;
+    display: block;
+
+    margin-top: 3em;
+    text-align: center;
+    background-color: #9ec4f1;
+    width: 100%;
+    color: white;
+    background-position: right;
+    font-family: "Heebo";
+    font-size: 0.9em;
+  }
+
+  .footercontact {
+    text-align: center;
+    margin-left: 1%;
+    margin-top: 0%;
+    padding-top: 5%;
+    width: 80%;
+    margin: auto;
+  }
+
+  .sponsors {
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  .sponsors img {
+    width: 10%;
+  }
+
+  b {
+    font-weight: bold;
+  }
+
+  .volg {
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+
+  .volg span {
+    padding-top: 1%;
+    text-decoration: none;
+    color: white;
+  }
+
+  .volg div span {
+    padding-top: 10%;
+    font-size: 2.5em;
+    line-height: 2em;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+  }
+
+  .abonneer {
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+  }
+
+  .abonneer form {
+    margin-top: 1%;
+    text-align: center;
+  }
+
+  .abonneer p {
+    text-align: center;
+  }
+
+  .volgenmail {
+    width: 100%;
+  }
+
+  #gsmnav {
+    display: none;
+  }
+
+  .actie {
+    margin-left: 1.5em;
+  }
+
+  .space {
+    padding-top: 120px;
+  }
+}
+
+/* ---niet media querie meer-------------------------------------------------- */
+
+#email {
+  background-color: #9ec3f100;
+  border: none;
+  border-bottom: 1px solid white;
+  margin-top: 1em;
+  color: white;
+}
+
+#submit {
+  background-color: #9ec3f100;
+  border: 1px solid white;
+  margin-top: 1em;
+  color: white;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+#submit:hover {
+  background-color: white;
+  color: #9ec4f1;
+}
+
+@media screen and (max-width: 280px) {
+  footer {
+    font-size: 0.7em;
+  }
+
+  header ul {
+    justify-content: center;
+  }
+
+  header li {
+    margin: auto 7px;
+  }
+}
