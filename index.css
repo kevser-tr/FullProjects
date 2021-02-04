@@ -9,6 +9,7 @@
   font-style: normal;
   font-display: block;
 }
+
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -62,17 +63,32 @@ li {
 
 /* --HEADER-------------------------------------------------------------*/
 svg {
-  fill: white;
+  fill: #83acfa;
   width: 23px;
 }
 
 svg:hover {
-  fill: black;
+  fill: #a9e9c6;
+}
+
+.mainheader p:hover {
+  color: #6ddfa0;
+}
+
+.mainheader {
+  padding-bottom: 15px;
 }
 
 .active {
-  fill: black;
-  color: black;
+  fill: #6ddfa0;
+  color: #6ddfa0;
+}
+
+#olifant {
+  padding: 10px;
+  fill: #83acfa;
+  width: 70px;
+  position: absolute;
 }
 
 /* -> icon voor het huisje */
@@ -87,8 +103,8 @@ header li img {
 
 header li p {
   font-size: 12px;
-  font-family: heebo;
-  color: white;
+  font-family: "heebo";
+  color: #8db4ff;
   text-align: center;
 }
 
@@ -109,19 +125,15 @@ header li p {
 }
 
 header ul {
-  margin-left: 2%;
-  margin-right: 2%;
-  padding: 4px;
+  padding: 15px 6px;
   padding-right: 17px;
   display: flex;
-  border-radius: 60px;
-  background-color: #9ec4f1;
 }
 
 h1 {
   font-weight: bold;
   font-size: 40px;
-  margin: 40px;
+  margin: -12px;
   font-family: "Heebo", arial, sans-serif;
 }
 
@@ -134,38 +146,50 @@ h1 {
 .discover a {
   text-align: center;
   font-family: "Heebo", arial, sans-serif;
-  background-color: #a2b98a;
+  background-color: #6ddfa0;
   text-decoration: none;
   color: white;
-  border: 2px solid #a2b98a;
-  border-radius: 20px;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-left: 20px;
-  padding: 5px 10px;
+  padding: 10px 15px;
+  transition: all 0.5s;
+}
+
+.discover a:hover {
+  padding: 15px 20px;
 }
 
 /* ---HEADER DEEL 2------------------------------------------------------------ */
 
 header h1 {
-  text-align: center;
-  color: white;
-  font-size: 6em;
+  text-align: left;
+  color: #83acfa;
+  font-size: 2.5em;
+  margin-left: 90px;
+  position: absolute;
+  margin-top: 25px;
+  z-index: -10;
 }
 
+.mobieletitel {
+  display: none;
+}
+
+/* 
 .mainheader {
   background-image: url(./afbeeldingen/header/Banner.jpg);
   background-position: 20% 20%;
   background-size: cover;
   padding-top: 10px;
   padding-bottom: 10px;
-}
+} */
 
 /* ---UITGELICHTTE_ACTIVITEITEN-------------------------------------------- */
 .home {
   margin: auto;
   margin-top: 3em;
-  max-width: 1250px;
+  max-width: 1500px;
 }
 
 main {
@@ -178,7 +202,7 @@ main {
   margin-bottom: 5%;
 }
 
-.driehoeklinks {
+/* .driehoeklinks {
   margin-top: 210px;
   width: 0;
   height: 0;
@@ -186,14 +210,47 @@ main {
   border-right: solid 10px black;
   border-left: solid 10px transparent;
   border-bottom: solid 10px transparent;
+} */
+
+#uitgelicht {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  background-image: url(afbeeldingen/header/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: slideshow 15s ease-in infinite;
 }
 
-#uitgelicht_1 {
-  width: 90%;
-  height: 430px;
-  margin: auto;
-  background-image: url(afbeeldingen/header/Molenbeek_licht_op.jpg);
-  background-position: 60%;
+@keyframes slideshow {
+  0% {
+    background-image: url(afbeeldingen/header/1.jpg);
+  }
+
+  32% {
+    background-image: url(afbeeldingen/header/1.jpg);
+  }
+
+  33% {
+    background-image: url(afbeeldingen/header/3.jpg);
+  }
+
+  65% {
+    background-image: url(afbeeldingen/header/3.jpg);
+  }
+
+  66% {
+    background-image: url(afbeeldingen/header/4.jpg);
+  }
+
+  99% {
+    background-image: url(afbeeldingen/header/4.jpg);
+  }
+
+  100% {
+    background-image: url(afbeeldingen/header/1.jpg);
+  }
 }
 
 .home #homecarousel {
@@ -201,7 +258,7 @@ main {
   flex-direction: row;
 }
 
-.driehoekrechts {
+/* .driehoekrechts {
   margin-top: 210px;
   width: 0;
   height: 0;
@@ -209,7 +266,7 @@ main {
   border-right: solid 10px transparent;
   border-left: solid 10px black;
   border-bottom: solid 10px transparent;
-}
+} */
 
 #homecarouselinfo {
   width: 90%;
@@ -232,12 +289,17 @@ main {
   font-weight: 400;
 }
 
+.categorie {
+  text-transform: uppercase;
+}
+
 /* --KAARTJE ----------------------------------------------------------- */
 #kaart {
   font-weight: 800;
   text-align: center;
   color: black;
 }
+
 #kaart p {
   font-weight: 200;
   font-size: 1em;
@@ -249,13 +311,14 @@ main {
 #kaartjeh2 {
   font-size: 2em;
   font-weight: 800;
-  padding-left: 4.5%;
+  padding-left: 5%;
   text-align: left;
+  padding-bottom: 10px;
 }
 
 iframe {
   width: 90%;
-  height: 391px;
+  height: 491px;
 }
 
 #Contactp {
@@ -263,6 +326,7 @@ iframe {
   font-size: 1em;
   line-height: 19px;
 }
+
 /* --HOMECONTACTFORMULIER-------------------------------------------- */
 
 #homecontact {
@@ -288,7 +352,7 @@ iframe {
   padding-top: 2%;
   margin-left: 2%;
   width: 60vw;
-  background-color: #a2b98a;
+  background-color: #8db4ff;
   color: white;
 }
 
@@ -316,7 +380,7 @@ button:focus {
 
 #homeform input {
   width: 90%;
-  background-color: #a2b98a;
+  background-color: #8db4ff;
   border: none;
   border-bottom: solid white 1px;
   margin-bottom: 5%;
@@ -332,30 +396,33 @@ button:focus {
 }
 
 #homeform #homesubmit {
-  width: 30%;
+  width: 25%;
   text-align: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.301);
+  background-color: #6ddfa0;
   border-bottom: none;
-  margin-left: 70%;
+  margin-left: 75%;
   margin-top: 3%;
   margin-bottom: 1%;
+  padding: 0.2em;
+  cursor: pointer;
+  z-index: 20;
 }
 
 /* --FOOTER---------------------------------------------------- */
 footer {
-  background-image: url(afbeeldingen/logo/logofant.svg);
-  background-size: cover;
+  background-image: url(afbeeldingen/logo/logofantV3.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   padding-top: 1.5em;
   margin: 0%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3em;
   text-align: center;
-  background-color: #9ec4f1;
+  background-color: #8db4ff;
   width: 100%;
   color: white;
-  background-position: right;
+  background-position: center;
   font-family: "Heebo";
 }
 
@@ -375,9 +442,11 @@ footer img {
   width: 100%;
   margin-top: 3%;
 }
+
 .sponsors img {
   width: 5%;
 }
+
 .volg {
   text-align: center;
   margin-top: 0%;
@@ -419,18 +488,50 @@ footer img {
   text-align: center;
 }
 
+::placeholder {
+  color: white;
+}
+
 .volgenmail {
   width: 100;
   text-align: center;
 }
+
 /* --INFORMATION.HTML------------------------------------------- */
 .informationheader {
   padding-top: 10px;
 }
 
-#info h1 {
-  padding: 10px;
+/* .bg {
+  background-image: url("./afbeeldingen/bg/olifant_op2.png") ;
+} */
+#bodyinformatie {
+  position: relative;
 }
+
+.backgroundPrints {
+  background-image: url("./afbeeldingen/V12Asset_left.png"),
+    url("./afbeeldingen/V12Asset_right.png");
+  background-position: top left, top right;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  z-index: -20;
+  object-fit: cover;
+}
+
+.info {
+  position: relative;
+}
+
+.info h1 {
+  padding: 10px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  margin-left: 11.5%;
+}
+
 figure h1 {
   margin-left: 3.7em;
   padding: 10px;
@@ -445,19 +546,22 @@ figure h1 {
   display: flex;
   align-items: center;
   flex-wrap: flex;
+  justify-content: center;
 }
 
 .info p {
   width: 50%;
-  font-size: 16pt;
-  line-height: 30px;
-  color: #707070;
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 19px;
+  color: black;
   padding-top: 36px;
 }
 
 .logorechts {
-  margin-left: 15em;
-  margin-bottom: 2em;
+  /* margin-left: 15em; */
+  /* margin-bottom: 2em; */
+  padding-bottom: 28px;
 }
 
 .logorechts img {
@@ -470,129 +574,27 @@ figure h1 {
 }
 
 .logolinks img {
-  margin: 0 8em;
+  margin: 0.8em;
 }
 
 /* -------ACTIVITEITEN.HTML------------------------------------ */
-.activities {
-  margin: auto;
-}
-
-.activiteitenheader {
-  padding-top: 10px;
-}
-
-.filter a {
-  text-decoration: none;
-}
-
-.test {
-  margin: auto;
-}
-
-.filter li {
-  color: black;
-  background: white;
-  display: block;
-  float: left;
-  padding: 1rem;
-  position: relative;
-  text-decoration: none;
-  transition-duration: 0.5s;
-  width: 170px;
-  border-bottom: 1px solid gray;
-  margin-left: 10%;
-  margin-top: 50px;
-}
-
-.dropdown li {
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.dropdown li:first-child {
-  border-top: 1px solid gray;
-}
-
-.filter li a {
-  color: rgb(0, 0, 0);
-}
-
-.dropdown li:hover {
-  background: #c3dca8;
-  cursor: pointer;
-}
-
-.filter li:focus-within a {
-  outline: none;
-}
-
-.filter ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  min-width: 5rem;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none;
-  width: 170px;
-}
-
-.filter ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-.filter ul li ul li {
-  clear: both;
-  width: 100%;
-}
-
-b {
-  font-weight: bold;
-}
-
-.zoek {
-  text-decoration: none;
-  display: inline;
-  color: white;
-  background-color: #a2b98a;
-  border: 1px solid #a2b98a;
-  padding: 5px 2em;
-  border-radius: 25px;
-  font-size: 16pt;
-  margin-left: 30px;
-}
-
-.space {
-  padding-top: 70px;
-}
-
 .activiteiten article {
   width: 250px;
   height: 400px;
   margin: 3em 40px;
-  z-index: -1;
   margin-top: 0;
-}
-
-.icon {
-  float: right;
 }
 
 .activiteiten {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  max-width: 80%;
+  margin: auto;
 }
 
 .actie {
-  margin-left: 2.6em;
+  margin-left: 4.1em;
   margin-bottom: 12px;
   padding-bottom: 0;
 }
@@ -601,8 +603,8 @@ b {
   font-size: 11pt;
   margin: 0;
   text-transform: uppercase;
-  color: rgb(167, 166, 166);
-  font-weight: 200;
+  color: #6ddfa0;
+  font-weight: 400;
   padding-top: 5px;
 }
 
@@ -614,10 +616,12 @@ b {
 
 .Twolines h3 {
   padding-bottom: 0;
+  margin-top: 0.2em;
 }
 
 .activiteiten p {
   margin: 5px 0;
+  font-weight: 300;
 }
 
 article {
@@ -637,9 +641,14 @@ p img {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #ffd5a6;
+  background-color: #6ddfa0;
   color: white;
   padding: 5px 15px;
+}
+
+.infobutton a {
+  color: white;
+  text-decoration: none;
 }
 
 .time {
@@ -656,6 +665,205 @@ p img {
 
 .price {
   margin-left: 7px;
+}
+
+/************************
+*****FILTER SYSTEEM******  
+************************/
+
+/* reset */
+ul.ft-menu,
+ul.ft-menu * {
+  border: 0;
+  padding: 0;
+  line-height: 1;
+  position: relative;
+  text-align: left;
+  font-family: "Heebo" Arial sans-serif;
+  font-size: 20px;
+}
+
+/* positie formulier */
+ul.ft-menu {
+  list-style: none;
+  width: 100%;
+  margin-left: 55px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+ul.ft-menu > li.ft-field {
+  display: inline-block;
+  margin-right: 150px;
+  background: none !important;
+  position: relative !important;
+}
+
+ul.ft-menu > li.ft-field > span.ft-label {
+  cursor: pointer;
+}
+
+ul.ft-menu > li.ft-field > span.ft-label:after {
+  font-size: 80%;
+  content: " \25bc";
+}
+
+ul.ft-menu > li.ft-field > span.ft-label.ft-opened:after {
+  content: " \25b2";
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel {
+  position: absolute;
+  min-width: 200px;
+  background-clip: padding-box;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  margin-left: -105px;
+  z-index: 9999;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel:before,
+ul.ft-menu > li.ft-field > div.ft-panel:after {
+  position: absolute;
+  content: " ";
+  height: 0;
+  width: 0;
+  left: 50%;
+}
+
+/* tag */
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected {
+  padding: 5px 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.268);
+  border-bottom: none;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li {
+  font-size: 10px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 1px;
+  cursor: pointer;
+  padding: 0px 5px 1px 5px;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  border: 1px solid #9bfac6;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: #cef5c3;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li:after {
+  content: " \00D7";
+  color: white;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li:active {
+  background: #c3dca8;
+}
+
+/* zoekbalk (hidden) */
+ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search {
+  display: none;
+}
+
+/* opties wanneer filter is uitgeklapt */
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li {
+  font-size: 12px;
+  display: block;
+  /*border: 0.5px solid #33373d;*/
+
+  display: block;
+  color: black;
+  border-bottom: 0.5px solid gray;
+  padding: 15px 0 15px 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 200px;
+  padding-left: 10px;
+  background-color: white;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li:hover {
+  background-color: #83acfa;
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li.ft-highlight {
+  background-color: #83acfa;
+}
+
+.ft-hidden {
+  display: none;
+}
+
+/* --ICOONTJES FILTERSYSTEEM-- */
+
+#iconleeftijd li {
+  background-image: url("./icons/tiener.png");
+  background-size: 18%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#iconleeftijd li + li {
+  background-image: url("./icons/kind.png");
+  background-size: 18%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#iconleeftijd li + li + li {
+  background-image: url("./icons/kleuter.png");
+  background-size: 18%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/* -- */
+
+#iconactiviteit li {
+  background-image: url("./icons/hand.png");
+  background-size: 12%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#iconactiviteit li + li {
+  background-image: url("./icons/oog.png");
+  background-size: 12%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#iconactiviteit li + li + li {
+  background-image: url("./icons/oor.png");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/* -- */
+
+#iconprijs li {
+  background-image: url("./icons/prijs.png");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#iconprijs li + li {
+  background-image: url("./icons/prijs.png"), url("./icons/prijs.png");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 88%, 100%;
+}
+
+#iconprijs li + li + li {
+  background-image: none;
 }
 
 /* ---KALENDER (AGENDA.HTML) --------------------------------------------------------- */
@@ -678,14 +886,31 @@ p img {
   margin-left: 5%;
 }
 
-.agendadriehoek {
+.carousel_button {
   margin-top: 328px;
+  position: absolute;
+  border: 0;
+  cursor: pointer;
 }
 
-#agendaflexbox {
+.carousel_button img {
+  position: absolute;
+  width: 17px;
+}
+
+.carousel_button--left {
+  left: 10px;
+  z-index: 2;
+}
+
+.carousel_button--right {
+  right: 35px;
+}
+
+/* #agendaflexbox {
   display: flex;
   flex-direction: row;
-}
+} */
 
 #kalender {
   margin: auto;
@@ -704,13 +929,8 @@ p img {
   position: relative;
 }
 
-#kalender div:nth-child(1),
-#kalender div:nth-child(2),
-#kalender div:nth-child(3),
-#kalender div:nth-child(3),
-#kalender div:nth-child(34),
-#kalender div:nth-child(35) {
-  background-color: #c9c9c99a;
+.grey-out {
+  background-color: #e0e5ee;
 }
 
 .daynumber {
@@ -722,13 +942,16 @@ p img {
 .kalenderevent {
   font-size: 0.8em;
   font-weight: 400;
-  background-color: #ffd5a6;
-  padding-right: 12px;
+  background-color: #6ddfa0;
+  color: white;
+  padding: 5px 12px 5px 5px;
+  margin: 0 3px;
 }
 
 .kalenderevent ~ .kalenderevent {
   margin-top: 5px;
 }
+
 .kalenderevent ~ img {
   margin-top: 5px;
 }
@@ -736,7 +959,8 @@ p img {
 .eventicon {
   position: absolute;
   width: 10%;
-  right: 0;
+  right: 5px;
+  padding-top: 5px;
 }
 
 input:focus,
@@ -745,19 +969,195 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+
+.carousel {
+  position: relative;
+  height: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel_track-container {
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel_track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 250ms ease-in-out;
+}
+
+.carousel_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel_nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carousel_indicator {
+  border: 0;
+  width: 60px;
+  height: 30px;
+  background-color: #83acfa;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel_indicator.current-slide {
+  background-color: #6ddfa0;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.carousel time {
+  font-weight: 700;
+  color: white;
+}
+
+/* info */
+
+.infofigure {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.infofigure img {
+  width: 100%;
+}
+
+.infodiv article h1 {
+  text-align: left;
+}
+
+.infosection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infodiv {
+  display: flex;
+  width: 60%;
+  margin-left: 20px;
+  padding-bottom: 20px;
+}
+
+.infodiv p {
+  font-weight: 300;
+}
+
+.infomain {
+  max-width: 1025px;
+  background-color: #ffffff;
+}
+
+.infoicons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  padding-right: 20px;
+  background-color: #83acfa;
+  width: 20%;
+  padding-top: 20px;
+  margin-top: 0%;
+  text-align: left;
+  padding-bottom: 3em;
+}
+
+.infoicons div {
+  display: flex;
+}
+
+.infoicons p {
+  margin-left: 1em;
+  line-height: 2em;
+  font-weight: 300;
+}
+
+.infodiv h1 {
+  text-align: center;
+  font-size: 11pt;
+  margin: 0;
+  text-transform: uppercase;
+  color: #6ddfa0;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.infodiv h2 {
+  font-weight: 800;
+  font-size: 16pt;
+  padding-bottom: 1em;
+  margin-top: 0.2em;
+}
+
+.back {
+  position: fixed;
+  right: 5%;
+  background-color: #6ddfa0;
+  width: 6em;
+  padding: 0.3em;
+  text-align: center;
+}
+
+.back a {
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  font-family: Heebo;
+}
+
 /* ------------------------------------------------------------------ */
 
 /*mobile version*/
 
 @media screen and (max-width: 768px) {
+  /*carousel*/
+
+  #uitgelicht {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 0.7em;
+  }
+
   #calendarbutton {
     display: none;
+  }
+
+  #olifant {
+    width: 12%;
   }
 
   header h1 {
     text-align: center;
     color: white;
     font-size: 2.4em;
+    width: 0;
+  }
+
+  .mobieletitel {
+    display: block;
+    text-align: center;
+    color: #83acfa;
+    font-size: 2em;
+    width: 300px;
+    margin: auto;
   }
 
   .discover {
@@ -770,43 +1170,36 @@ button:focus {
   .discover a {
     text-align: center;
     font-family: "Heebo", arial, sans-serif;
-    background-color: #a2b98a;
+    background-color: #6ddfa0;
     text-decoration: none;
     color: white;
-    border: 2px solid #a2b98a;
-    border-radius: 20px;
     font-weight: bold;
     font-size: 0.9em;
     padding: 5px 10px;
     margin: auto;
   }
 
-  #uitgelicht_1 {
-    width: 90%;
-    height: 200px;
-    margin: auto;
-    background-image: url(afbeeldingen/header/Molenbeek_licht_op.jpg);
-    background-position: 60%;
-  }
   #kaartje {
     margin-top: 20px;
     display: block;
     flex-direction: row;
     margin: auto;
     width: 100%;
-    background-color: RGB(158, 196, 241);
+    background-color: #83acfa;
     text-align: left;
   }
+
   #kaart {
-    background-color: #9ec4f1;
+    background-color: #83acfa;
     padding-bottom: 10px;
     margin: auto;
   }
+
   #kaartjeh2 {
     font-size: 1.5em;
     font-weight: 800;
     text-align: left;
-    background-color: RGB(158, 196, 241);
+    background-color: #83acfa;
     padding-top: 3%;
     padding-left: 27px;
     color: white;
@@ -819,6 +1212,10 @@ button:focus {
     text-align: center;
   }
 
+  .carousel {
+    height: 300px;
+  }
+
   #kaartje p {
     padding-top: 3%;
     padding-bottom: 3%;
@@ -828,9 +1225,11 @@ button:focus {
     width: 85%;
     color: white;
   }
+
   #homecarouselinfo {
-    top: 15px;
+    top: 0px;
   }
+
   /*contactform*/
 
   #homecontact {
@@ -855,7 +1254,7 @@ button:focus {
   #homeform {
     margin: auto;
     width: 95%;
-    background-color: #a2b98a;
+    background-color: #83acfa;
     color: white;
   }
 
@@ -876,7 +1275,7 @@ button:focus {
 
   #homeform input {
     width: 90%;
-    background-color: #a2b98a;
+    background-color: #83acfa;
     border: none;
     border-bottom: solid white 1px;
     margin-bottom: 5%;
@@ -890,81 +1289,133 @@ button:focus {
     width: 30%;
     text-align: center;
     color: white;
-    background-color: rgba(0, 0, 0, 0.301);
+    background-color: #6ddfa0;
     border-bottom: none;
     margin-left: 70%;
     margin-top: 3%;
   }
 
+  #homesubmit {
+    cursor: pointer;
+    z-index: 20;
+  }
+
   /* info */
 
-  .logorechts {
-    margin-left: 15em;
-    margin-bottom: 2em;
-  }
-
-  .logorechts img {
-    margin: 0 5em;
-  }
-
-  .logolinks img {
-    margin: auto;
-  }
-
-  .logolinks figure {
+  .infofigure {
     width: 100%;
-    margin: auto;
-  }
-
-  .info h1 {
+    height: 200px;
+    overflow: hidden;
     text-align: center;
-    margin-left: 0%;
+    background-color: white;
   }
 
-  .info div {
-    display: inline;
+  .infofigure img {
+    height: auto;
   }
 
-  .info p {
-    width: 80%;
-    font-size: 11pt;
-    line-height: 30px;
-    color: #707070;
+  .infodiv article h1 {
     text-align: left;
-    margin: auto;
+    margin-top: 0.2em;
   }
 
-  .driehoeklinks {
-    margin-top: 210px;
-    width: 0;
-    height: 0;
-    border-top: solid 10px transparent;
-    border-right: solid 10px rgba(0, 0, 0, 0);
-    border-left: solid 10px transparent;
-    border-bottom: solid 10px transparent;
+  .infosection {
+    display: block;
+    width: 100%;
   }
 
-  .driehoekrechts {
-    margin-top: 210px;
-    width: 0;
-    height: 0;
-    border-top: solid 10px transparent;
-    border-right: solid 10px transparent;
-    border-left: solid 10px rgba(0, 0, 0, 0);
-    border-bottom: solid 10px transparent;
+  .infodiv {
+    display: flex;
+    width: 90%;
+    padding-bottom: 20px;
+    margin-top: 0em;
+  }
+
+  .infodiv article {
+    margin-left: 0px;
+  }
+
+  .infodiv p {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  .infomain {
+    max-width: 1025px;
+    background-color: #6ddfa0;
+  }
+
+  .infoicons {
+    display: block;
+    margin-left: auto;
+    padding-right: 0;
+    background-color: #83acfa;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 0%;
+    text-align: center;
+    padding-bottom: 1em;
+    margin-bottom: 20px;
+  }
+
+  .infosection {
+    background-color: white;
+  }
+
+  .infoicons div {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .infoicons p {
+    margin-left: 0.5em;
+    line-height: 1em;
+  }
+
+  .infodiv h1 {
+    text-align: center;
+  }
+
+  .backgroundPrints {
+    background-image: none;
+  }
+
+  .back {
+    position: fixed;
+    bottom: 2%;
+    background-color: #6ddfa0;
+    width: 6em;
+    padding: 0.3em;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .back a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+  }
+
+  .activiteiten {
+    width: 6em;
+    padding: 0.3em;
+  }
+
+  .activiteiten a {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
   }
 
   /* --FOOTER---------------------------------------------------- */
   footer {
     margin: 0%;
     display: block;
-
     margin-top: 3em;
     text-align: center;
-    background-color: #9ec4f1;
     width: 100%;
     color: white;
-    background-position: right;
+    background-position: center;
     font-family: "Heebo";
     font-size: 0.9em;
   }
@@ -1040,11 +1491,58 @@ button:focus {
   }
 
   .actie {
-    margin-left: 1.5em;
+    margin-left: 1.4em;
   }
 
-  .space {
-    padding-top: 120px;
+  .dropdown {
+    margin-top: 1em;
+  }
+
+  ul.ft-menu,
+  ul.ft-menu * {
+    border: 0;
+    padding: 0;
+    line-height: 1;
+    position: relative;
+    text-align: left;
+    font-family: "Heebo" Arial sans-serif;
+    font-size: 20px;
+  }
+
+  /* positie formulier */
+  ul.ft-menu {
+    margin-left: 0px;
+  }
+
+  ul.ft-menu > li.ft-field {
+    display: block;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .info h1 {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+  }
+
+  .info div {
+    display: inline;
+    text-align: center;
+  }
+
+  .info figure {
+    width: 100%;
+    height: auto;
+  }
+
+  .info p {
+    width: 80%;
+    font-size: 11pt;
+    line-height: 30px;
+    text-align: left;
+    margin: auto;
   }
 }
 
@@ -1083,5 +1581,201 @@ button:focus {
 
   header li {
     margin: auto 7px;
+  }
+
+  #olifant {
+    width: 40px;
+  }
+
+  header h1 {
+    width: 0;
+  }
+
+  .mobieletitel {
+    font-size: 1.7em;
+    width: 250px;
+  }
+
+  .logorechts img {
+    margin: auto;
+  }
+
+  .info h1 {
+    width: 250px;
+  }
+}
+
+/* ======JAVASCRIPTKALENDER========================================================================== */
+/*  starting code can be found on github: https://github.com/portexe/VanillaCalendar/blob/master/style.css                          
+    Referenced from PortEXE                                                                                         
+    as used in their demo "Coding A Calendar App In Plain JavaScript":  https://www.youtube.com/watch?v=m9OSBJaQTlM         
+    Adapted by by Rebecca Rosies for the Use of Full projects course @ Erasmushogeschool Brussel            */
+
+#javakalender {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  justify-content: center;
+  background-color: #fffcff;
+}
+
+#javakalender h2 {
+  font-family: Heebo;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #83acfa;
+  padding-bottom: 5px;
+}
+
+#javakalender button {
+  width: 75px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: white;
+}
+
+#javakalender #header {
+  padding: 10px;
+  color: black;
+  font-family: Heebo;
+  font-weight: 400;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+#javakalender #header button {
+  background-color: #6ddfa0;
+  font-family: Heebo;
+}
+
+#javakalender #container {
+  width: 770px;
+}
+
+#javakalender #weekdays {
+  width: 100%;
+  display: flex;
+  color: #83acfa;
+  font-family: Heebo;
+}
+
+#javakalender #weekdays div {
+  width: 100px;
+  padding: 10px;
+}
+
+#javakalender #calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#javakalender .day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 5px;
+  box-shadow: 0px 0px 3px #c5d4c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#javakalender .day:hover {
+  background-color: #e8faed;
+}
+
+#javakalender .day + #currentDay {
+  background-color: #e8f4fa;
+}
+
+#javakalender .event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #58bae4;
+  color: white;
+  /* border-radius: 5px; */
+  max-height: 55px;
+  overflow: hidden;
+}
+
+#javakalender .padding {
+  cursor: default !important;
+  background-color: #fffcff !important;
+  box-shadow: none !important;
+}
+
+#javakalender #newEventModal,
+#deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+
+#javakalender #eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  /* border-radius: 3px; */
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#javakalender #eventTitleInput.error {
+  border: 2px solid red;
+}
+
+#javakalender #cancelButton,
+#deleteButton {
+  background-color: #d36c6c;
+}
+
+#javakalender #saveButton,
+#closeButton {
+  background-color: #83acfa;
+}
+
+#javakalender #eventText {
+  font-size: 14px;
+  font-family: Heebo;
+}
+
+#javakalender #modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-height: 1366px) {
+  footer {
+    bottom: 0;
+    position: fixed;
+  }
+
+  .ipadfooter {
+    position: static;
   }
 }
